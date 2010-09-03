@@ -1,0 +1,42 @@
+#######################################
+#                                     #
+#   This file contains translations   #
+#   of the application.               #
+#   Key and Value are separated       #
+#   by the equals-sign "=".           #
+#                                     #
+#######################################
+var:homeurl=http://wap.moluck.com/hhcms/pages/common/179
+
+alert.update=当前有新版本发布，点确定将会进行版本更新，点取消退出本系统
+
+cmd.showLog=日志
+cmd.update=更新
+cmd.cancel=取消
+cmd.ok=确定
+cmd.home=首页
+cmd.back=返回
+cmd.exit=退出
+cmd.save=保存
+cmd.invite=推荐好友
+cmd.help=帮助
+
+invite.label1=好东西就该分享:)
+invite.label2=快快推荐您的好友来欢乐谷吧！
+invite.label3=推荐留言：
+
+help.str0=欢乐谷，有欢有乐
+help.str1=v1.1 @ 2009
+help.str2=魔乐网版权所有
+help.str3=我们致力于为用户提供更优质的手机上网服务。
+help.str4=Wap.moluck.com
+
+alert.exit=是否真的退出？
+alert.sms=正在发送短消息，请稍候...
+
+adv.str0=数千视频短片，上万音乐歌曲随意下载
+adv.str1=游戏，音乐，美图，软件，应有尽有
+adv.str2=资讯大全，与互联网同步，尽在掌握
+adv.str3=声讯聊天，真人对话，欢乐谷的秘密法宝
+adv.str4=生活万事通，帮您的生活添姿彩
+adv.str5=VIP专区更多精选极致内容等你欢乐体验

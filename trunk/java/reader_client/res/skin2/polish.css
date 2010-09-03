@@ -1,0 +1,663 @@
+colors {
+	/* Í¨ÓÃÑÕÉ« */
+	menuBgColor:  #F9BFE7;
+	fontColor: #000000;
+	focusedFontColor: #FFFFFF;
+	translucentBgColor: argb( 0, 255, 255, 255 );
+	indicatorColor:rgb(235,192,58);
+	/* ä¯ÀÀÆ÷Ïà¹ØÑÕÉ« */
+	browserSmalltextColor: #222;         /* ä¯ÀÀÆ÷Ð¡ºÅ×ÖÏÔÊ¾ÑÕÉ«  */
+	browserIllustrateColor:  #333;       /*                       */
+	browserTextColor: #000000;           /* ä¯ÀÀÆ÷ÎÄ×ÖÑÕÉ«        */
+	browserTextFocusedColor: #FF0000;    /* ä¯ÀÀÆ÷¾Û½¹ÎÄ×ÖÑÕÉ«    */
+	browserLinkColor: #000000;           /* ä¯ÀÀÆ÷Á´½ÓÑÕÉ«        */
+	browserLinkFocusedColor: #FF0000;    /* ä¯ÀÀÆ÷¾Û½¹Á´½ÓÑÕÉ«    */
+	browserOptionColor: #000000;         /* ä¯ÀÀÆ÷Ñ¡Ôñ¿Ø¼þÏÔÊ¾ÑÕÉ«*/
+	browserBordersColor: #000000;        /* ä¯ÀÀÆ÷±ß¿òÏÔÊ¾ÑÕÉ«    */
+	browserIndicatorColor: #FF0000;      /* ä¯ÀÀÆ÷½ø¶ÈÌõÏÔÊ¾ÑÕÉ«  */
+}
+
+backgrounds {
+	loadingBackground {
+		scale-mode: proportional;
+		image: url(empty.png);
+	}
+	splashBackground {
+		scale-mode: proportional;
+		image: url(splash.png);
+	}
+	mainBackground {
+		scale-mode: proportional;
+		image: url(bg.png);
+		color: #FFD2F5;
+	}
+	homeBackground {
+		scale-mode: scale;
+		image: url(home.png);
+		color: #FFD2F5;
+		top: title;
+		bottom: menubar;
+	}
+	helpBackground{
+		image: url(bg.png);
+		color: #FFD2F5;
+	}
+	menuBackground {
+		type: vertical-gradient;
+		top-color: #FBE3FA;
+		bottom-color: #D957AF;
+	}
+	titleBackground {
+		scale-mode: proportional;
+		image: url(title.png);
+		color: #FFD2F5;
+	}
+	title2Background {
+		scale-mode: proportional;
+		image: url(title2.png);
+		color: #FFD2F5;
+	}
+	barBackground {
+		type: simple;
+		color: menuBgColor;
+		border-width: 1;
+		border-color: #900965;
+	}
+	subbarBackground {
+		type: simple;
+		color: #FFFFFF;
+		border-width: 0;
+		border-color: #FFFFFF;
+	}
+	 partialTop1 {
+		type: partial-gradient;
+		start: 0%;
+		end: 50%;
+		top-color: #F934E9;
+		bottom-color: white;
+  }
+  partialBottom1 {
+		type: partial-gradient;
+		start: 50%;
+		end: 100%;
+		top-color: white;
+		bottom-color: #F934E9;
+  }
+	menuitemFg {
+ 		type: combined;
+ 		foreground: partialTop1;
+ 		background: partialBottom1;
+  }
+  menuitemBg {
+ 		color: white;
+  }
+	itemBackground {
+		type: combined;
+		foreground: menuitemFg;
+		background: menuitemBg;
+	}
+	commandBackground {
+		scale-mode: expand;
+		color: translucentBgColor;
+	}
+	scrollBackground {
+		type: horizontal-gradient;
+		left-color: #D957AF;
+		right-color: #FD9CDE;
+		start: 20%;
+		end: 80%;
+	}
+	indicator {
+		type: round-rect;
+		arc: 2;
+		color:#FFFFFF;
+		border:none;
+  }
+}
+
+fonts {
+	titlefont {
+		face: proportional;
+		size: small;
+		color: black;
+	}
+	Itemfont {
+		face: proportional;
+		size: small;
+		style: bold;
+		color: focusedFontColor;
+	}
+	focusedItemfont {
+		face: proportional;
+		size: small;
+		style: bold;
+		color: fontColor;
+	}
+	menufocusedItemfont {
+		face: proportional;
+		size: small;
+		color: white;
+	}
+	smallWBoldfont {
+		face: proportional;
+		size: small;
+		style: bold;
+		color: white;
+	}
+	smallWfont {
+		face: proportional;
+		size: small;
+		color: white;
+	}
+	smallBBoldfont {
+		face: proportional;
+		size: small;
+		style: bold;
+		color: black;
+	}
+	smallBfont {
+		face: proportional;
+		size: small;
+		color: black;
+	}
+	menufont {
+		face: proportional;
+		size: small;
+		color: black;
+	}
+	menuItemfont {
+		face: proportional;
+		size: small;
+		color: black;
+	}
+	menuItem1font {
+		face: proportional;
+		size: small;
+		color: #FF0000;
+	}
+}
+
+default {
+	font: smallBfont;
+}
+
+title {
+	padding: 0;
+	padding-left: 20;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	font: titlefont;
+	background: titleBackground;
+	border: none;
+	layout: left | horizontal-expand;
+}
+
+title2 {
+	padding: 0;
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	font: titlefont;
+	background: title2Background;
+	border: none;
+	layout: horizontal-expand | horizontal-center ;
+}
+
+.splashScreen {
+	padding: 2;
+	padding-left: 10;
+	padding-right: 10;
+	background : splashBackground;
+	layout: horizontal-expand | horizontal-center | bottom;
+}
+
+.mainScreen {
+	padding: 0;
+	padding-left: 10;
+	padding-right: 10;
+	background : homeBackground;
+	show-scrollbar: false;
+	layout: horizontal-expand | horizontal-center | vertical-center;
+	columns: 3;
+	columns-width: equal;
+}
+
+.browserScreen {
+	padding: 0;
+	padding-left: 5;
+	padding-right: 5;
+	font: smallWfont;
+	background: mainBackground;
+	layout: horizontal-expand | horizontal-center | top;
+}
+.helpScreen{
+	padding: 2;
+	padding-left: 10;
+	padding-right: 10;
+	font: smallWfont;
+	background: helpBackground;
+	layout: horizontal-center | vertical-center ;
+	columns:1;
+	columns-width:equel;
+	
+}
+.helpItem{
+	layout:horizontal-center ;
+}
+scrollbar {
+	scrollbar-slider-color: #FF0000;
+	scrollbar-slider-width: 4;
+	scrollbar-fadeout: true;
+	opacity: 180;
+	scrollbar-slider-mode:page;
+	background: scrollBackground;
+}
+
+.messageAlert {
+/*
+	title-style: title2;
+*/
+	padding: 10;
+	padding-left: 15;
+	padding-right: 15;
+	view-type: none;
+	show-dismiss-command: false;
+	layout: horizontal-expand | vertical-shrink | horizontal-center | bottom;
+	background-type: simple;
+	background-color: white;
+	repaint-previous-screen: true;
+	//#if polish.midp2
+		screen-change-animation: fade;
+	//#else
+		screen-change-animation: right;
+	//#endif
+	font: smallBfont;
+}
+
+.loadIndicator
+{
+	margin-left: 15;
+	margin-right: 15;
+	margin-bottom: 10;
+	background:indicator;
+	border-color: #9EA5A7;
+	gauge-color:indicatorColor;
+	gauge-show-value:false;
+	gauge-gap-width:0;
+	layout: horizontal-expand | horizontal-center | bottom;
+	font: smallBfont;
+}
+.processIndicator{
+	border-color:blue;/*BrowserScreenÖÐÏÂ·½½ø¶ÈÌõ¡£Îª±ß¿òÑÕÉ«Öµ*/
+	gauge-color:red;   /*ÎªÌî³äÑÕÉ«Öµ*/ 
+}
+.progessItem {
+	font: smallBfont;
+	layout: horizontal-expand | horizontal-center | bottom;
+}
+
+.mainCommand {
+	margin-top: 5;
+	padding: 0;
+	padding-vertical: 0;
+	font: smallBfont;
+	icon-image-align: top;
+	max-width: 100;
+	layout: center;
+}
+
+.mainCommand:hover {
+	margin-top: 5;
+	padding: 0;
+	padding-vertical: 0;
+	font: menuItem1font;
+	border: none;
+	background: commandBackground;
+	layout: center;
+}
+
+.mainCommand:pressed {
+	view-type: particle;
+	icon-image-align: top;
+	font: smallBfont;
+	padding: 0;
+	padding-vertical: 0;
+	icon-image-align: top;
+	margin-top: 5;
+	max-width: 100;
+	layout: center;
+}
+
+focused {
+	padding: 1;
+	border {
+		type: round-rect;
+		arc: 4;
+		border-color: fontColor;
+		border-width: 2;
+	}
+	font: focusedItemfont;
+	layout: expand | left;	
+}
+
+.message {
+	font: smallBfont;
+	layout: horizontal-shrink | vertical-shrink | horizontal-center | bottom;
+}
+
+label {
+	font: smallBfont;
+	margin: 2;
+	margin-left: 5;
+	layout: left;
+}
+
+alertcontent {
+	font: smallBfont;
+	background-color: white;
+	layout: center
+}
+
+.input {
+	margin: 1;
+	background-color: white;
+	layout: expand;
+}
+
+.input:hover {
+	margin: 0;
+	background-color: white;
+	border-color: black;
+}
+.inputInvite{
+	margin: 1;
+	background-color: white;
+	layout: expand;
+	border-color: black;
+	font-size:small;
+	textfield-direct-input: false;
+}
+.inputInvite:hover{
+	margin: 0;
+	background-color: white;
+	border-color: red;
+	font-size:small;
+}
+info {
+	margin: 1;
+	font-color: gray;
+	layout: right;
+}
+
+menubar {
+	margin: 0;
+	padding-top: 3;
+	padding: 0;
+	font: smallBBoldfont;
+	background: menuBackground;
+	text-effect: shadow;
+}
+
+leftcommand
+{
+	margin: 0;
+    margin-horizontal: 10;
+    //#if polish.key.MiddleSoftKey:defined or polish.MenuBar.useMiddleCommand
+    	/* the middle command is used, so lower the left and right commands relatively */
+		padding-top: 7;
+	//#endif
+	padding-bottom: 0;
+
+	font: smallBfont;
+}
+
+rightcommand extends leftcommand
+{
+	layout: right;
+}
+
+middlecommand extends leftcommand {
+	padding-top: 1;
+	font-color: black;
+}
+
+menu {
+	margin-left: 0;
+	margin-right: 0;
+	min-width: 80;
+	padding: 0;
+	font: menufont;
+	background: barBackground;
+	menubar-color: black;
+	view-type: slide-up;
+}
+
+menu1 extends menu {
+	min-width: 60;
+	font: menuItemfont;
+	background: subbarBackground;
+	view-type: slide;
+	slideview-direction: right;
+}
+
+menu1:hover extends menuItem:hover {
+	min-width: 60;
+	background: itemBackground;
+	font: menufocusedItemfont;
+	text-effect: shadow;
+}
+
+menuItem {
+	margin-top: 2;
+	padding: 2;
+	padding-left: 5;
+	font: menuItemfont;
+	layout: left;
+	//#if ${ exists( arrowRight.png ) }
+		command-child-indicator: url(arrowRight.png);
+	//#else
+		command-child-indicator-color: black;
+		command-child-indicator-width: 8;
+		command-child-indicator-height: 10;
+	//#endif
+}
+
+menuItem:hover {
+	font: menufocusedItemfont;
+	background: itemBackground;
+	text-effect: shadow;
+	layout: left | horizontal-expand;
+}
+
+/*
+ ä¯ÀÀÆ÷ÉèÖÃ
+*/
+
+.illustrate {
+	always-include: true;
+	font-color: browserIllustrateColor;
+	font-style: italic;
+}
+
+.invisible {
+	always-include: true;
+	visible: false;
+	view-type: midp2;
+	layout: expand;
+}
+
+.visible extends invisible {
+	visible: true;
+}
+
+.addressInput {
+	text-wrap: false;
+	padding: 3;
+	padding-left: 5;
+	padding-vertical: 1;
+	background {
+		type: round-rect;
+		color: white;
+	}
+	font: smallBfont;
+	border-color: black;
+	border-width: 1;
+	layout: left | expand;	
+}
+
+.addressInput:hover {
+	padding: 3;
+	padding-left: 3;
+	background {
+		type: round-rect;
+		color: white;
+	}
+	font: smallBfont;
+	border-color: black;
+	border-width: 1;
+	layout: left | expand;	
+}
+
+.browserInput {
+	padding: 1;
+	background-color: white;
+	border-color: black;
+	textfield-width: 125;
+	text-wrap: false;
+	text-wrap-animate: false;
+}
+
+.browserInput:hover {
+	padding: 1;
+	background-color: white;
+	border-color: black;
+	textfield-width: 125;
+	font: smallBfont;
+	text-wrap: false;
+	text-wrap-animate: false;
+	textfield-caret-color: black;
+	textfield-direct-input: false;
+}
+
+.result {
+	always-include: true;
+	margin: 2;
+	background-color: silver;
+	view-type: midp2;
+	view-type-sequential-traversal: true;
+	layout: expand;
+	change-styles: visible > invisible;
+}
+
+.result:hover {
+	margin: 0;
+	border-color: #222;
+	border-width: 2;
+	change-styles: invisible > visible;
+	background {
+		type: horizontal-gradient;
+		left-color: white;
+		right-color: #ccc;
+	}
+}
+
+.smalltext {
+	always-include: true;
+	font-color: browserSmalltextColor;
+	font-size: small;
+}
+
+.text {
+	always-include: true;
+	font-color: browserTextColor;
+	font-size: small;
+}
+ 
+.browser {
+	view-type: midp2;
+	font-size: small;
+}
+
+.browserText {
+	always-include: true;
+	padding-bottom: 1;
+	padding-right: 1;
+	font {
+		color: browserTextColor;
+		size: small;
+	}
+	focused-style: .browserTextFocused
+}
+
+.browserTextFocused {
+	always-include: true;	
+	padding-bottom: 1;
+	padding-right: 1;
+	font {
+		color: browserTextFocusedColor;
+		size: small;
+	}
+}
+
+.browserLink {
+	always-include: true;	
+	padding-bottom: 1;
+	padding-right: 1;
+	font {
+		color: browserLinkColor;
+		size: small;
+	}
+	focused-style: .browserLinkFocused;
+}
+
+.browserLinkFocused {
+	always-include: true;	
+	padding-bottom: 1;
+	padding-right: 1;
+	font {
+		color: browserLinkFocusedColor;
+		size: small;
+	}
+}
+
+.browserOption {
+	always-include: true;
+	padding-bottom: 1;
+	padding-right: 1;
+	font {
+		color: browserLinkColor;
+		size: small;
+	}
+	focused-style: .browserLinkFocused;
+}
+
+.browserDownloadIndicator {
+	inherit: true;
+	padding-top: 1;
+	gauge-color: browserIndicatorColor;
+	/*
+	gauge-gap-color:#ADDFFF;
+	*/
+	layout: vertical-shrink | horizontal-shrink | top | right;
+}
+
+.browserOptionItem	{
+	always-include: true;
+	padding-bottom: 1;
+	padding-right: 1;
+	font {
+		color: browserLinkColor;
+		size: small;
+	}
+	focused-style: .browserLinkFocused;
+}
+
+/*
+.browserOptionItem:hover{
+	font: smallBfont;
+}
+*/
