@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="GBK"?>
+<project name="RpClient"  default="j2mepolish">
+<property name="polish.home" value="D:\J2ME-Polish" />
+<property file="${polish.home}/global.properties" />
+<property name="app.path" value="cn.hunthawk.j2me"/>
+<property name="device" value="Nokia/N95"/>
+<property name="devices" value="${device}"/>
+<property name="app.projectpath" value="D:\workspace\RpClient" />
+<property name="app.kemulator0.9.5" value="D:\kemulator"/>
+<property name="app.kemulator0.9.8" value="D:\Program Files\KEmulator"/>
+<property name="app.version" value="4"/>
+<property name="soft.version" value="1.0.8"/>
+<property name="polish.Browser.cmwap" value="false" />
+<property name="app.use.firstmask" value="true" />	
+<property name="wtk.home" value="D:\Program Files\Java_ME_platform_SDK_3.0" />	
+
+<target name="set-skin" depends="skin1" />
+<target name="run-skin1" depends="skin1,j2mepolish" />
+<target name="run-skin2" depends="skin2,j2mepolish" />
+
+	
+<!--<property name="devices" value="${device},Generic/HawkPhone_128x160,Generic/HawkPhone_176x220,Motorola/A1200,Motorola/V6,Generic/HawkPhone_240X320"/>-->
+<taskdef name="j2mepolish" classname="de.enough.polish.ant.PolishTask" classpath="${polish.home}/lib/enough-j2mepolish-build.jar:${polish.home}/lib/jdom.jar"/>
+
+<target name="skin1" >
+	<property name="soft.name" value="RpClient" />
+	<property name="MidletName" value="沃 书城" />
+	<property name="resource.dir" value="res/skin1" />
+	<property name="dir.work" value="build/skin1" />
+</target>
+<target name="Nokia N7370系列打包" depends="j2mepolish">
+		<property name="soft.name" value="RpClient" />
+		<property name="MidletName" value="沃 书城1" />
+		<property name="resource.dir" value="res/skin1" />
+		<property name="dir.work" value="build/skin1" />
+	
+</target>
+<target name="skin2" >
+	<property name="soft.name" value="RpClient2" />
+	<property name="MidletName" value="沃书城1" />
+	<property name="resource.dir" value="res/skin2" />
+	<property name="dir.work" value="build/skin2" />
+</target>
+		
+<target name="setdeploy" description="build">
+	<property name="deploy-url" value="" />
+</target>
+
+<target name="test" description="build">
+	<property name="test" value="true" />
+	<property name="dir.work" value="build/test" />
+</target>
+
+<target name="init" depends="set-skin">
+	<property name="test" value="false" />
+</target>
+
+<target name="j2mepolish" depends="init" description="control" >
+	<j2mepolish>
+		<info
+			name="${MidletName}"
+			version="${soft.version}"
+			vendorName="Tenfen"
+			icon="/logo.png"
+			jarName="PhoneA1_240x320_RpClient_v108.jar"
+			jarUrl="${polish.jarName}"
+			copyright="Copyright 2009 Tenfen tech. All rights reserved."
+		/>
+		<deviceRequirements if="test">
+			<requirement name="Identifier" value="${device}" />
+		</deviceRequirements>
+		<deviceRequirements if="!test and device:defined">
+			<requirement name="Identifier" value="${devices}" />
+		</deviceRequirements>
+		
+		<build symbols="soft" fullscreen="menu" usePolishGui="true" workDir="${dir.work}" binaryLibraries="lib">
+			<midlet class="${app.path}.MainMidlet" name="${MidletName}"/>
+			<variables includeAntProperties="true" >
+				<!--自定义变量-->
+				<variable name="update-url" value="" />
+				<variable name="title" value="${MidletName}" />
+				<variable name="polish.Browser.proxy" value="10.0.0.172:80" />
+				<variable name="polish.use.line" value="true" />
+				<variable name="polish.http.mobile" value="13002040034" />
+				<variable name="polish.soft.version" value="${soft.version}" />
+				<!--浏览器相关变量-->				
+				<variable name="polish.MenuBar.useExtendedMenuBar" value="true" />
+				<variable name="polish.MenuBar.useMiddleCommand" value="false"/>
+				<variable name="polish.ScreenInfo.enable" value="false" />
+				<variable name="polish.GameCanvas.useFullScreen" value="yes" />
+				<variable name="polish.i18n.useDynamicTranslations" value="false"/>
+				<variable name="polish.TextField.suppressCommands" value="true"/>
+				<variable name="polish.TextField.useDirectInput" value="false"/>
+				<variable name="polish.TextField.supportSymbolsEntry" value="true"/>
+				<variable name="polish.TextField.usePredictiveInput" value="false"/>
+				<variable name="polish.TextField.showInputInfo" value="false" />
+				<variable name="polish.deactivateScrollIndicator" value="false" />
+				<variable name="polish.Browser.MaxRedirects" value="10" />
+				<variable name="polish.useScrollBar" value="true" />
+				<variable name="polish.Browser.Gzip" value="false" />
+				<variable name="polish.Browser.PaintDownloadIndicator" value="false" />
+				<variable name="polish.Browser.MemorySaver" value="true" />
+				<variable name="polish.TabbedForm.allowTabSelection" value="false"/>
+				<variable name="polish.useDynamicStyles" value="true"/>
+				<!--<variable name="polish.Browser.MemorySaver.Amount" value="5242880" />-->
+				<!--常规设定变量-->
+				<variable name="polish.command.ok" value="确定"/>
+				<variable name="polish.command.cancel" value="取消"/>
+				<variable name="polish.command.select" value="选择"/>
+				<variable name="polish.command.mark" value="标记"/>
+				<variable name="polish.command.unmark" value="反选"/>
+				<variable name="polish.command.options" value="菜单"/>
+				<variable name="polish.command.followlink" value="进入"/>
+				<variable name="polish.command.submit" value="提交"/>
+				<variable name="polish.command.delete" value="取消"/>
+				<variable name="polish.command.clear" value="清除"/>
+				<variable name="polish.command.hide" value="隐藏"/>
+				<variable name="polish.command.return" value="后退"/>
+				<variable name="polish.title.input" value="输入"/>
+				<variable name="polish.command.entersymbol" value="添加符号"/>
+				<variable name="tmp.suppressSelectCommand" value="true"/>
+				<variable name="polish.List.suppressMarkCommands" value="true"/>
+				<variable name="polish.List.suppressSelectCommand" value="true"/>
+				<variable name="polish.List.suppressCommands" value="true"/>
+				<variable name="polish.ChoiceGroup.suppressMarkCommands" value="true"/>
+				<variable name="polish.ChoiceGroup.suppressSelectCommands" value="true"/>
+				<variable name="polish.TabbedForm.allowTabSelection" value="true"/>
+				<variable name="polish.TabbedForm.releaseResourcesOnTabChange" value="true"/>
+				<variable name="tmp.supportViewType" value="false"/>
+				<variable name="tmp.menuFullScreen" value="true"/>
+				<variable name="tmp.fullScreen" value="true"/>
+				
+			</variables>
+
+			<resources dir="${resource.dir}" defaultexcludes="yes" excludes="readme.txt,backup/*" >
+				<root dir="${resource.dir}/design" />
+				<root dir="${resource.dir}/sounds" />
+				<root dir="${resource.dir}/images/${polish.vendor}/128x160" if="polish.ScreenWidth &lt;= 175"/>
+				<root dir="${resource.dir}/images/${polish.vendor}/176x220" if="polish.ScreenWidth == 176 and polish.ScreenHeight == 220"/>
+				<root dir="${resource.dir}/images/${polish.vendor}/176x208" if="polish.ScreenWidth == 176 and polish.ScreenHeight == 208"/>
+				<root dir="${resource.dir}/images/${polish.vendor}/208x208" if="polish.ScreenWidth == 208 and polish.ScreenHeight == 208"/>
+				<root dir="${resource.dir}/images/${polish.vendor}/240x320" if="polish.ScreenWidth == 240 and polish.ScreenHeight == 320" />
+				<root dir="${resource.dir}/images/${polish.vendor}/320x240" if="polish.ScreenWidth == 320 and polish.ScreenHeight == 240" />
+			</resources>
+			
+
+			<obfuscator name="ProGuard" useDefaultPackage="false" unless="polish.blackberry" >
+			</obfuscator>
+
+			
+
+			
+			<debug enable="false" showLogOnError="false" verbose="true" level="error">
+				<filter pattern="cn.hunthawk.j2me.*" level="debug" />
+				<!--filter pattern="cn.hunthawk.j2me.browser.*" level="debug" / -->	
+				<!--filter pattern="de.enough.polish.ui.Container" level="debug" / -->
+				
+			</debug>
+			
+		</build>
+		
+		<emulator 
+			wait="true"
+			securityDomain="maximum" 
+			if="test">
+			<parameter name="-Xheapsize" value="67108864" />
+		</emulator>
+		
+	</j2mepolish>
+</target>
+	
+	
+<target name="emulator" depends="set-skin,test,j2mepolish" />
+	
+<target name="kemulator0.9.5" depends="j2mepolish">
+	<exec executable="${app.kemulator0.9.5}/KEmulator.exe" dir="dist"> 
+		<arg value="${app.projectpath}\dist\Generic240x320_${soft.name}.jar" />
+	</exec>
+</target>
+	<target name="kemulator0.9.8" depends="j2mepolish">
+		<exec executable="${app.kemulator0.9.8}/KEmulator.exe" dir="dist"> 
+			<arg value="${app.projectpath}\dist\PhoneA1_240x320_RpClient_v108.jar" />
+		</exec>
+	</target>
+<target name="clean" description="clean files">
+	<delete dir="build" />
+	<delete dir="dist" />
+	<delete dir="tmp" />
+</target>
+	
+</project>
