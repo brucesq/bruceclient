@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meposeproject>
+	<meposeproperty name="id.buildxml" value="D:\workspace\HawkViewer\build.xml" />
+	<meposeproperty name="id.supported.platforms" value="MIDP/2.0" />
+	<meposeproperty name="id.supported.configurations" value="CLDC/1.1" />
+	<meposeproperty name="id.supported.devices" value="Generic/Midp2Cldc11" />
+	<meposeproperty name="id.path.siemenshome" value="\" />
+	<meposeproperty name="id.path.motorolahome" value="\" />
+	<meposeproperty name="id.path.projecthome" value="D:\workspace\RpClient" />
+	<meposeproperty name="id.path.mpphome" value="" />
+	<meposeproperty name="id.current.target.onlybuild" value="j2mepolish" />
+	<meposeproperty name="id.path.sonyhome" value="\" />
+	<meposeproperty name="id.current.device" value="Generic/Midp2Cldc11" />
+	<meposeproperty name="id.path.polishhome" value="D:\J2ME-Polish" />
+	<meposeproperty name="id.path.wtkhome" value="\" />
+	<meposeproperty name="id.path.nokiahome" value="\" />
+</meposeproject>
