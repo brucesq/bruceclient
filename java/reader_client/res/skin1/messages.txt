@@ -1,0 +1,68 @@
+#######################################
+#                                     #
+#   This file contains translations   #
+#   of the application.               #
+#   Key and Value are separated       #
+#   by the equals-sign "=".           #
+#                                     #
+#######################################
+var:homeurl=http://iread.wo.com.cn/pps/s.do?td=353155&pd=250000000
+##public#############
+cmd.showLog=日志
+cmd.exit=退出
+cmd.ok=是
+cmd.no=否
+
+##splashScreen########
+cmd.quit=退出
+
+##mainScreen##########
+cmd.selectitem=1.进  入
+cmd.set=2.设  置
+cmd.invitation=3.推  荐
+cmd.bookstore=4.书  架
+cmd.help=5.帮  助
+cmd.exit=6.退  出
+cmd.download=下载管理
+##BrowserScreen2######
+cmd.screen2refresh=1.刷     新
+cmd.screen2set=2.设     置
+cmd.screen2help=3.帮     助
+cmd.screen2index=4.返回主页
+
+cmd.mybookmark=1.我的书签
+cmd.favorite=2.我的收藏
+cmd.mydownload=3.我的下载
+cmd.refresh=刷       新
+cmd.set1=设       置
+cmd.help1=帮       助
+cmd.index=返回主页
+cmd.set2=5.设       置
+cmd.help2=6.帮       助
+cmd.index2=7.返回主页
+######################################
+cmd.pageup=1.上一章[1]
+cmd.pagedown=2.下一章[3]
+cmd.bookmark=3.书    签[*]
+cmd.fullscreen=4.全    屏[2]
+cmd.exitfullscreen=4.退出全屏[2]
+cmd.refresh1=5.刷    新[5]
+cmd.readset=6.设    置[6]
+cmd.returnindex=7.返回主页[0]
+cmd.exitread=8.退出阅读[9]
+
+
+
+cmd.loadbook=读取书签
+cmd.deletemark=删除书签
+cmd.return=返回
+cmd.select=选择
+cmd.save=保存
+cmd.read=阅读
+cmd.search=搜索
+#################################
+cmd.exitcenter=退出管理
+btn.read=开始阅读
+btn.download=图书下载
+btn.reset=更新提醒
+btn.opendir=浏览
